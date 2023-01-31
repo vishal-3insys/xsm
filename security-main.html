@@ -1,0 +1,599 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>SECURITY SETTINGS | 3Insys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="The Cross Integration Suite from 3Insys takes a 360-degree approach to SYSTEM, DATA, and SECURITY" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- choices css -->
+    <link href="assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- color picker css -->
+    <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/classic.min.css" /> <!-- 'classic' theme -->
+    <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/monolith.min.css" /> <!-- 'monolith' theme -->
+    <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/nano.min.css" /> <!-- 'nano' theme -->
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
+
+    <!-- preloader css -->
+    <link rel="stylesheet" href="assets/css/preloader.min.css" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-topbar="dark">
+
+    <!-- <body data-layout="horizontal"> -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="home.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-icon.svg" alt="" height="42">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-sm-w.svg" alt="" height="45">
+                            </span>
+                        </a>
+
+                        <a href="home.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-icon.svg" alt="" height="42">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-sm-w.svg" alt="" height="45">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <!-- App Search-->
+
+                </div>
+
+                <div class="row d-flex flex-grow-1" style="">
+                    <div class="col-xl-6 col-md-10">
+                        <form class="app-search p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
+
+                                    <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+
+
+
+                    <div class="dropdown d-none d-sm-inline-block">
+                        <button type="button" class="btn header-item" id="mode-setting-btn">
+                            <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                            <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" title="Notifications" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i data-feather="bell" class="icon-lg"></i>
+                            <span class="badge bg-danger rounded-pill">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                             aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small text-reset text-decoration-underline"> Unread (2)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="#!" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <!--<h6 class="mb-1">James Lemire</h6>-->
+                                            <div class="font-size-13 text-muted">
+                                                <p class="mb-1">New Organization has been created.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>30 minutes ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#!" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <!--<h6 class="mb-1">James Lemire</h6>-->
+                                            <div class="font-size-13 text-muted">
+                                                <p class="mb-1">New Application has been onboarded.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span>View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-sm-inline-block">
+                        <button type="button" title="Organization" class="btn header-item noti-icon position-relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><span class="badge bg-danger rounded-pill">1</span>
+                        </button>
+
+                    </div>
+                    <div class="dropdown d-flex">
+                        <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                 alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium">Super Admin</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="profile-mng.html"><i class="mdi mdi-clipboard-account-outline font-size-16 align-middle me-1"></i> My Account</a>
+                            <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
+                            <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>
+
+                            <a class="dropdown-item" href="index.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+
+                        <li>
+                            <a href="home.html">
+                                <i data-feather="home"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">Home</span>
+                            </a>
+                        </li> <!--Home-->
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-domain"></i>
+                                <span data-key="t-dashboard">
+                                    Domain Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="new-domain.html"> Create Domain</a></li>
+                                <li><a href="modify-domain.html" data-key="t-product-detail"> Modify Domain</a></li>
+                                <li><a href="domain-management.html" data-key="t-orders">Manage Domain</a></li>
+
+                            </ul>
+                        </li>  <!--Domain-->
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">Organization Management</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+
+
+                                <li><a href='new-organization.html' data-key="t-product-detail">Create Organization</a></li>
+                                <li><a href='modify-organization.html' data-key="t-product-detail">Modify Organization</a></li>
+                                <li><a href='organization-management.html' data-key="t-product-detail">Manage Organization</a></li>
+                                <!--<li><a href="#" data-key="t-product-detail"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>Modify Organization</a></li>
+                            <li><a href="#" data-key="t-orders"><i class="mdi mdi-menu"></i>Activate / Deactivate Organization</a></li>-->
+
+
+                            </ul>
+                        </li>   <!--Organization-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-apps"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">Permission Management</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+
+                                <li>
+                                    <a href="new-permission.html">
+
+                                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                        <span data-key="t-dashboard" onclick="location.href='new-permission.html'">Create Permission</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="modify-permission.html">
+
+                                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                        <span data-key="t-dashboard" onclick="location.href='modify-permission.html'">Modify Permission</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="permission-management.html">
+
+                                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                        <span data-key="t-dashboard" onclick="location.href='permission-management.html'">Manage Permission</span>
+                                    </a>
+                                </li>
+                                <!--<li>
+                                <a href="#">
+
+                                    <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                    <span data-key="t-dashboard" onclick="location.href='#'">Assign Permission to Role</span>
+                                </a>
+                            </li>-->
+
+
+
+                            </ul>
+                        </li>  <!--Permission-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-account-circle-outline fa-2x"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Role Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="user-role.html">Create Role</a></li>
+                                <li><a href="role-modify.html">Modify Role</a></li>
+                                <li><a href="role-management.html">Manage Role</a></li>
+                            </ul>
+
+                        </li> <!--role-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-account-box-outline fa-2x"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Users Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href='new-user.html'>Create User</a></li>
+                                <!--<li><a href="#">Modify User</a></li>-->
+                                <!--<li><a href="#">Edit User</a></li>
+                            <li><a href="#">Delete User</a></li>
+                            <li><a href="#">Activate/ Deactivate User</a></li>-->
+                                <li><a href="user-management.html">Manage User</a></li>
+                                <!--<li><a href="#">Assign Users to Role</a></li>-->
+
+
+                            </ul>
+                        </li>  <!--Users-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-account-group fa-2x"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Group Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href='new-group.html'>Create Group</a></li>
+                                <li><a href="modify-group.html">Modify Group</a></li>
+                                <!--<li><a href="group-management.html">Delete Group</a></li>-->
+                                <li><a href="group-management.html">Manage Group</a></li>
+                                <!--<li><a href="#">Assign Group to Role</a></li>-->
+
+
+                            </ul>
+                        </li> <!--Groups-->
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg></span>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Mapping Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="users-to-organization.html">Users to Organization </a></li>
+                                <li><a href="user-to-role.html">User to Role</a></li>
+                                <li><a href="users-to-group.html">User to Group</a></li>
+                                <li><a href="group-to-role.html">Group to Role</a></li>
+                                <li><a href="role-to-permission.html">Role to Permission </a></li>
+
+
+                            </ul>
+                        </li>
+                        <!--Mapping-->
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-apps fa-2x"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Application Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="create-application.html">Create Application</a></li>
+                                <li><a href="modify-application.html">Modify Application</a></li>
+                                <!--<li><a href="#">Delete Application</a></li>-->
+                                <li><a href="manage-application.html">Manage Application</a></li>
+
+
+                            </ul>
+                        </li> <!--Applications-->
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-command"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+                                    Advanced API Management
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="api-developer-portal.html">Developer Portal</a></li>
+                                <li><a href="API-Publisher-Portal.html">Publisher Portal</a></li>
+
+
+                            </ul>
+                        </li><!--Advanced API Management-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+                                <i class="mdi mdi-account-cog-outline fa-2x"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">
+
+                                    Settings
+                                </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="security-main.html">Password Policy Management</a></li>
+                                <li><a href="verification-2fac.html">Multi Factor Authentication Policy Management</a></li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!-- Sidebar -->
+        </div>
+
+
+
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <!--<h4 class="mb-sm-0 font-size-18">Form Validation</h4>-->
+
+                                <div class="page-title-left">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                                        
+                                        <li class="breadcrumb-item"><a href="security-main.html">Settings</a></li>
+                                        <li class="breadcrumb-item"><a href="">Password Policy Management</a></li>
+
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h4 class="card-title"><i class="mdi mdi-shield-edit fa-2x"> </i>SECURITY SETTINGS</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" name="formRadios" disabled value="Organization Units">
+                                    </div>
+                                    <div>
+
+                                        <input type="search" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." multiple>
+                                        <datalist id="datalistOptions">
+                                            <option value="3insysabc35.com"></option>
+                                            <option value="3insysabc36.com"></option>
+                                            <option value="3insysabc37.com"></option>
+                                            <option value="3insysabc38.com"></option>
+                                            <option value="3insysabc39.com"></option>
+
+                                        </datalist>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card pr-0 pl-0 mb-3 h-100">
+                                <div class="card-header">
+                                    <div class="mb-0 row w-100">
+                                        <div class="my-auto col-10"><h4>Password Management</h4> <span class="fw-normal">Manage Password Management </span></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row ">
+
+                                        <div class="col-12">
+                                            <div class="mb-3">Configure Password Policies For Your Organization</div>
+
+
+                                            <div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
+                                                <i class="mdi mdi-alert-outline label-icon"></i><strong>Warning</strong> - Label Icon Arrow Alert
+
+                                            </div>
+
+                                            <div><strong>Strength</strong></div>
+                                            <div class="form form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <div class="form-check-label">
+                                                    Enforce Strong Password
+                                                </div>
+                                            </div>
+                                            <div><strong>Length</strong></div>
+                                            <div class="mb-3">Must Be Between 8 To 100 Characters</div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-4">
+                                                    <span>Minimum Length</span><input type="number" class="form-control col-6">
+                                                </div><div class="col-1 align-items-center row">&emsp;-&emsp;</div><div class="col-4"><span>Maximum Length</span><input class="form-control col-6" type="number"></div>
+                                            </div>
+                                            <div><strong class="mb-3">Strength And Length Enforcement</strong></div>
+                                            <div class="mb-3">
+                                                Changes To Length And Strength Requirements Are Applied The Next Time An
+                                                Affected User Changes Their Password. To Apply Changes Immediately, Start
+                                                Enforcement The Next Time A User Signs In.
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input mb-3" type="checkbox">
+                                                <div class="form-check-label fw-normal text-dark mb-3">
+                                                    Enforce Password Policy At Next Sign-In
+                                                </div>
+                                            </div>
+                                            <div class=""><strong>Reuse</strong></div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox">
+                                                <div class="form-check-label fw-normal text-dark">
+                                                    Allow Password Reuse
+                                                </div>
+                                            </div>
+                                            <div class=""><strong>Expiration</strong></div>
+                                            <div class="mb-3">Password Reset Frequently</div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <select class="col-6 form-select">
+
+                                                        <option value="Never expires" selected>Never Expires</option>
+
+                                                    </select>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div><!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        2022 © XSM.
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- end main content-->
+    <!-- END layout-wrapper -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <!-- pace js -->
+    <script src="assets/libs/pace-js/pace.min.js"></script>
+
+    <!-- choices js -->
+    <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- color picker js -->
+    <script src="assets/libs/%40simonwep/pickr/pickr.min.js"></script>
+    <script src="assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- datepicker js -->
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+
+    <!-- init js -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
