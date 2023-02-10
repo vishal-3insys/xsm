@@ -1114,63 +1114,7 @@
     <!--<script>
         $(document).ready(function () { $("#progrss-wizard").bootstrapWizard({ onTabShow: function (a, r, i) { r = (i + 1) / r.find("li").length * 100; $("#progrss-wizard").find(".progress-bar").css({ width: r + "%" }) } }) }); var triggerTabList = [].slice.call(document.querySelectorAll(".twitter-bs-wizard-nav .nav-link")); triggerTabList.forEach(function (a) { var r = new bootstrap.Tab(a); a.addEventListener("click", function (a) { a.preventDefault(), r.show() }) });
     </script>-->
-    <!--<script>
-        document.querySelector("#userActive").addEventListener("click", function () {
-            Swal.fire({
-                title: "Active!",
-
-                icon: "success",
-                confirmButtonColor: "#1c84ee"
-            })
-        });
-        document.querySelector("#userDeactive").addEventListener("click", function () {
-            Swal.fire({
-                title: "Deactive!",
-
-                icon: "error",
-                confirmButtonColor: "#1c84ee"
-            })
-        });
-        document.querySelector("#userdelete").addEventListener("click", function () {
-            Swal.fire({
-                title: "Delete!",
-
-                icon: "error",
-                confirmButtonColor: "#1c84ee"
-            })
-        });
-
-        const deletebtn = document.querySelectorAll("[data-deletebtn]");
-        for (var i = 0; i <= deletebtn.length; i++) {
-            deletebtn[i].addEventListener("click", function () {
-                Swal.fire({
-                    title: "Delete!",
-
-                    icon: "error",
-                    confirmButtonColor: "#1c84ee"
-                })
-            });
-        }
-
-        function onoff(i) {
-
-            if (i == false) {
-                Swal.fire({
-                    title: "Active!",
-
-                    icon: "success",
-                    confirmButtonColor: "#1c84ee"
-                })
-            } else {
-                Swal.fire({
-                    title: "Deactive!",
-
-                    icon: "error",
-                    confirmButtonColor: "#1c84ee"
-                })
-            }
-        }
-    </script>-->
+    
     <script>
         const navPillEls = document.querySelectorAll('.nav-pills .nav-link');
         const tabPaneEls = document.querySelectorAll('.tab-pane');
@@ -1182,12 +1126,15 @@
         nextBtnEl.addEventListener('click', function () {
             currentStep = (currentStep + 1) % navPillEls.length;
             updateStep(currentStep);
+           
+            
         });
 
         previousBtnEl.addEventListener('click', function () {
             currentStep = (currentStep + navPillEls.length - 1) % navPillEls.length;
             updateStep(currentStep);
-
+            console.log(currentStep);
+            
         });
 
         navPillEls.forEach(navPillEl => {
@@ -1209,8 +1156,20 @@
                 tabPaneEl.classList.remove('show', 'active');
             });
             tabPaneEls[step].classList.add('show', 'active');
+            if (currentStep == 0) {
+                previousBtnEl.style.visibility = "hidden"
+            } else { previousBtnEl.style.visibility = "visible"; }
+            if (currentStep == tabPaneEls.length - 1 ) {
+                nextBtnEl.textContent = "Finish";
+            } else {
+                nextBtnEl.textContent = "Next";
+            }
         }
-
+        if (currentStep == 0) {
+            previousBtnEl.style.visibility = "hidden"
+        } else { previousBtnEl.style.visibility = "visible"; }
+       
+       
 
     </script>
 </body>
