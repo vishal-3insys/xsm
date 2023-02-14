@@ -40,32 +40,54 @@
             content: "";
             display: none !important;
         }
+        .nav-item {
+            position: relative;
+            margin: 0 1rem;
+        }
 
         
+        .nav-link.done {
+            background-color: #1c84ee40;
+        }
+        .nav-link.done::after {
+            border-color: transparent #1c84ee40 transparent #1c84ee40;
+        }
 
-            .nav-item:after {
-                content: "";
-                border-top: 12px solid transparent;
-                border-bottom: 12px solid transparent;
-                border-left: 12px solid #E7E9EB;
-                position: absolute;
-                right: -12px;
-                top: 0;
-                z-index: 1;
-            }
+        .nav-link.done::before {
+            border-color: #1c84ee40 transparent #1c84ee40 transparent;
+        }
+        .nav-link.active {
+            background-color:currentColor;
+            border-radius:0;
 
-            .nav-item:after {
-                content: "";
-                border-top: 12px solid transparent;
-                border-bottom: 12px solid transparent;
-                border-left: 12px solid #E7E9EB;
-                position: absolute;
-                right: -12px;
-                top: 0;
-                z-index: 1;
-            }
-        .nav-pills .nav-link {
-            border-radius: 0px 50px 50px 0px;
+        }
+        .nav-item .nav-link::after, .nav-item .nav-link::before {
+            position:absolute;
+            top:0;
+            content:"";
+            border-style:solid;
+            border-width:18px 0 18px 18px;
+            z-index:150;
+        }
+        .nav-link::after {
+            right: -17px;
+            border-color: transparent transparent transparent transparent;
+        }
+        .nav-link::before {
+            left: -17px;
+            border-color: transparent transparent transparent transparent;
+        }
+        .nav-link.active::after {
+            border-color: transparent var(--bs-primary) transparent var(--bs-primary);
+        }
+        .nav-link.active::before {
+            border-color: var(--bs-primary) transparent var(--bs-primary) transparent;
+        }
+        .nav-item:last-child .nav-link::after {
+            visibility: hidden;
+        }
+        .nav-item:first-child .nav-link::before {
+            visibility: hidden;
         }
     </style>
 </head>
@@ -456,23 +478,27 @@
                     <div class="" id="">
                         <div class="row" id="wizard-list">
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="pills-tab-1" data-bs-toggle="pill" href="#tab1" role="tab" aria-controls="pills-tab1" aria-selected="true">Domain Management</a>
+                                <li class="nav-item " role="presentation">
+                                   
+                                    <a class="nav-link active done" id="pills-tab-1" data-bs-toggle="pill" href="#tab1" role="tab" aria-controls="pills-tab1" aria-selected="true">Domain Management</a>
+                                   
+                                </li>
+                                <li class="nav-item " role="presentation">
+                                  
+                                    <a class="nav-link " id="pills-tab-2" data-bs-toggle="pill" href="#tab2" role="tab" aria-controls="pills-tab2" aria-selected="false">Organization Management</a>
+                                   
+                                </li>
+                                <li class="nav-item " role="presentation">
+                                    <a class="nav-link " id="pills-tab-3" data-bs-toggle="pill" href="#tab3" role="tab" aria-controls="pills-tab3" aria-selected="false">Application Management</a>
+                                </li>
+                                <li class="nav-item " role="presentation">
+                                    <a class="nav-link " id="pills-tab-4" data-bs-toggle="pill" href="#tab4" role="tab" aria-controls="pills-tab4" aria-selected="false">Permissions</a>
+                                </li>
+                                <li class="nav-item " role="presentation">
+                                    <a class="nav-link  " id="pills-tab-5" data-bs-toggle="pill" href="#tab5" role="tab" aria-controls="pills-tab5" aria-selected="false">Roles</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-tab-2" data-bs-toggle="pill" href="#tab2" role="tab" aria-controls="pills-tab2" aria-selected="false">Organization Management</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-tab-3" data-bs-toggle="pill" href="#tab3" role="tab" aria-controls="pills-tab3" aria-selected="false">Application Management</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-tab-4" data-bs-toggle="pill" href="#tab4" role="tab" aria-controls="pills-tab4" aria-selected="false">Permissions</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-tab-5" data-bs-toggle="pill" href="#tab5" role="tab" aria-controls="pills-tab5" aria-selected="false">Roles</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-tab-6" data-bs-toggle="pill" href="#tab6" role="tab" aria-controls="pills-tab6" aria-selected="false">User Management</a>
+                                    <a class="nav-link " id="pills-tab-6" data-bs-toggle="pill" href="#tab6" role="tab" aria-controls="pills-tab6" aria-selected="false">User Management</a>
                                 </li>
                             </ul>
                         </div>
@@ -1151,7 +1177,7 @@
             navPillEls.forEach(navPillEl => {
                 navPillEl.classList.remove('active');
             });
-            navPillEls[step].classList.add('active');
+            navPillEls[step].classList.add('active','done');
 
             tabPaneEls.forEach(tabPaneEl => {
                 tabPaneEl.classList.remove('show', 'active');
