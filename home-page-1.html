@@ -44,10 +44,9 @@
             position: relative;
             margin: 0 1rem;
         }
-        .nav-link {
-            border-bottom-right-radius: 0;
-            border-top-right-radius: 0;
-        }
+            .nav-item:not(:first-child,:last-child) .nav-link {
+                border-radius: 0;
+            }
         .nav.nav-item:last-child {
             border-bottom-right-radius: unset;
             border-top-right-radius: unset;
@@ -76,11 +75,11 @@
             z-index:150;
         }
         .nav-link::after {
-            right: -16px;
+            right: -17px;
             border-color: transparent transparent transparent transparent;
         }
         .nav-link::before {
-            left: -18px;
+            left: -17px;
             border-color: transparent transparent transparent transparent;
         }
         .nav-link.active::after {
